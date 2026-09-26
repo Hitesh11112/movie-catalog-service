@@ -19,8 +19,13 @@ import com.example.demo.service.ReviewService;
 @RequestMapping("/api/reviews")
 public class ReviewController {
 
-	private ReviewService reviewService;
+	private final ReviewService reviewService;
 
+    ReviewController(ReviewService reviewService) {
+        this.reviewService = reviewService;
+    }
+    
+//    1.fetchById
     @PostMapping
     public Review addReview(@RequestBody Review review) {
         return reviewService.addReview(review);

@@ -13,8 +13,8 @@ import com.example.demo.repository.ReviewRepository;
 
 @Service
 public class ReviewServiceImpl implements ReviewService {
+	
 	private final ReviewRepository reviewRepository;
-
     private final MovieClient movieClient;
 
     ReviewServiceImpl(ReviewRepository reviewRepository, MovieClient movieClient) {

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7/bundles/stomp.umd.min.js"></script>
+</head>
+<body>
+    <div class="chat-container">
+    
+		<div class="chat-header">
+		    Chat App
+		    <div>
+		        <button id="clear-btn" onclick="clearHistory()">Clear</button>
+		        <button id="clear-btn" onclick="logout()">Logout</button>
+		    </div>
+		</div>
+		
+        <div id="name-bar">
+            <input id="sender" placeholder="Enter your name" />
+        </div>
+        <div id="messages"></div>
+        <div class="input-bar">
+            <input id="content" placeholder="Type a message" onkeypress="if(event.key==='Enter') sendMessage()" />
+            <button onclick="sendMessage()">&#9658;</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

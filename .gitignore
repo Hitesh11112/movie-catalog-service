@@ -1,4 +1,6 @@
-.metadata/ 
-.classpath 
-.project 
-.settings/ 
+.metadata/
+.classpath
+.project
+.settings/
+
+application-dev.properties

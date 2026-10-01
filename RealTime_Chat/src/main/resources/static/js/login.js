@@ -13,7 +13,7 @@ function login() {
 
     if (!username || !password) {
         errorEl.textContent = 'Enter username and password';
-        return;
+        return;	
     }
 
     fetch('/api/auth/login', {

@@ -9,7 +9,7 @@ fetch('/api/messages', {
     .then(res => res.json())
     .then(messages => messages.forEach(renderMessage));
 
-const socket = new SockJS('http://localhost:8098/ws');
+const socket = new SockJS('http://movie-catalog-service-production.up.railway.app/ws');
 const stompClient = new StompJs.Client({
     webSocketFactory: () => socket,
     onConnect: () => {
